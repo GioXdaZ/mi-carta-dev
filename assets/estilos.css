@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+/* ============================================
+   MODO ORIGINAL (morados reemplazados por azul oscuro)
+   ============================================ */
 body {
-    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    background: linear-gradient(135deg, #1a2a4a, #2a4058);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,13 +19,13 @@ body {
 
 .carta {
     width: 360px;
-    background: linear-gradient(145deg, #1e1a2f, #0f0c1f);
+    background: linear-gradient(145deg, #1a2a4a, #0f1825);
     border-radius: 28px;
     padding: 20px;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     color: #f0f0f0;
-    border-top: 4px solid #f4c430; /* dorado para épica, cambia según rareza */
+    border-top: 4px solid #f4c430;
 }
 
 .carta:hover {
@@ -43,7 +46,7 @@ h1 {
 .clase {
     text-align: center;
     font-size: 1rem;
-    background: #2a2a3f;
+    background: #2a4058;
     display: inline-block;
     width: auto;
     margin: 8px auto 0;
@@ -57,7 +60,7 @@ h1 {
     font-size: 5rem;
     text-align: center;
     margin: 16px 0;
-    background: #2e2a44;
+    background: #2a4058;
     border-radius: 100px;
     width: 100px;
     height: 100px;
@@ -81,7 +84,7 @@ h1 {
 }
 
 .barra {
-    background-color: #2a2a3e;
+    background-color: #1a2a4a;
     border-radius: 20px;
     overflow: hidden;
     margin-top: 4px;
@@ -98,7 +101,7 @@ h1 {
 
 .habilidad {
     margin: 20px 0;
-    background: #2a253d;
+    background: #2a4058;
     padding: 12px;
     border-radius: 20px;
     text-align: center;
@@ -111,7 +114,7 @@ h1 {
 
 .rareza {
     display: inline-block;
-    background: #1e2a3a;
+    background: #1a2a4a;
     padding: 6px 14px;
     border-radius: 30px;
     font-size: 0.8rem;
@@ -145,4 +148,150 @@ p {
     font-size: 0.8rem;
     margin-top: 12px;
     color: #aaa;
+}
+
+.hobbies {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+#hobbyContainer {
+    background: #2a4058;
+    padding: 12px;
+    border-radius: 20px;
+    margin: 10px 0;
+    min-height: 80px;
+}
+
+#btn-hobby {
+    background: #1a2a4a;
+    color: white;
+    margin-top: 8px;
+    padding: 8px;
+}
+
+/* Espaciado general entre botones */
+button {
+    margin-bottom: 8px;
+}
+
+.header-carta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header-carta h1 {
+    text-align: left;
+    flex: 1;
+    margin: 0;
+}
+
+#btn-modo {
+    width: auto;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background: #2a4058;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+#btn-modo:hover {
+    background: #f4c430;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   MODO NOCTURNO (actual)
+   ============================================ */
+body.modo-noche {
+    background: #0a0a14;
+}
+
+body.modo-noche .carta {
+    background: linear-gradient(145deg, #141124, #0a0818);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
+}
+
+body.modo-noche .rareza {
+    color: #bbaaff;
+}
+
+body.modo-noche .habilidad {
+    background: #1e1b2e;
+}
+
+body.modo-noche .avatar {
+    background: #1a172a;
+}
+
+body.modo-noche #hobbyContainer {
+    background: #1e1b2e;
+}
+
+body.modo-noche .hobbies {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Reverso de la carta */
+#reverso {
+    margin-top: 15px;
+    background: #2a4058;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.reverso-contenido p {
+    margin: 8px 0;
+    color: #f0f0f0;
+}
+
+#btn-reverso {
+    background: #f4c430;
+    color: #000000;
+    margin-top: 12px;
+}
+
+/* Ruleta de poderes */
+#poder-container {
+    margin-top: 15px;
+    background: #2a4058;
+    padding: 12px;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 70px;
+}
+
+#poder-nombre {
+    font-weight: bold;
+    color: #f4c430;
+}
+
+#btn-poder {
+    background: #f4c430;
+    color: #000000;
+    margin-top: 12px;
+}
+
+/* Brillo para la carta */
+.carta.brillo {
+    box-shadow: 0 0 30px #f4c430, 0 0 15px #ffb347;
+    transition: 0.1s;
 }

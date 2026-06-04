@@ -9,10 +9,13 @@
 </head>
 <body>
     <div class="carta">
-        <h1>Giovanni Dazarola</h1>
+        <div class="header-carta">
+            <h1>Giovanni Dazarola</h1>
+            <button id="btn-modo">🌙</button>
+        </div>
         <h2 class="clase">Frontend</h2>
 
-        <div class="avatar">🧙‍♂️</div> <!-- o imagen si prefieres -->
+        <div class="avatar">🧙‍♂️</div>
 
         <div class="estadisticas">
             <h3>Estadísticas</h3>
@@ -27,6 +30,31 @@
         </div>
 
         <div class="rareza">Rara</div>
+
+        <div class="hobbies">
+            <h3>🎲 Hobby aleatorio</h3>
+            <div id="hobbyContainer">
+                <strong id="hobbyName"></strong>: <span id="hobbyDesc"></span>
+            </div>
+            <button id="btnHobby">🎲 Otro hobby</button>
+        </div>
+
+        <!-- Reverso (se oculta/muestra) -->
+        <button id="btn-reverso">📜 Ver reverso</button>
+        <div id="reverso" style="display: none;">
+            <div class="reverso-contenido">
+                <p><strong>⭐ Frase favorita:</strong> "El código limpio es arte"</p>
+                <p><strong>🍕 Comida favorita:</strong> Pizza de pepperoni</p>
+                <p><strong>🎧 Canción para programar:</strong> Synthwave / Darksynth</p>
+                <p><strong>🤓 Dato curioso:</strong> Aprendí CSS diseñando una Pokédex desde cero</p>
+            </div>
+        </div>
+
+        <!-- Ruleta de poderes (siempre visible) -->
+        <button id="btn-poder">⚡ Lanzar poder</button>
+        <div id="poder-container">
+            <p><strong>Poder secreto:</strong> <span id="poder-nombre">---</span></p>
+        </div>
 
         <button id="btn-activar">Activar habilidad</button>
         <p>Activaciones: <span id="contador">0</span></p>
